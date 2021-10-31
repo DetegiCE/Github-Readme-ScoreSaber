@@ -33,7 +33,15 @@ http.createServer(async (req, res) => {
         return;
     }
 
-    const result = await cards(json, parseInt(json500[0].body));
+    let json500val = json500[0].body;
+    for (var i = 0 ; i , json500.length ; i++) {
+        if (json500[i].author_association === "OWNER" && json[i].substr(0, 5) === "pp500") {
+            json500val = json500[i].body;
+            break;
+        }
+    }
+
+    const result = await cards(json, parseInt(json500val));
     res.setHeader('Content-Type', 'image/svg+xml');
     res.write(result);
     res.end();

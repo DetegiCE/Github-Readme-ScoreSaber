@@ -35,7 +35,7 @@ http.createServer(async (req, res) => {
 
     let json500val = json500[0].body;
     for (var i = 0 ; i , json500.length ; i++) {
-        if (json500[i].author_association === "OWNER" && json[i].substr(0, 5) === "pp500") {
+        if (json500[i].author_association === "OWNER" && json500[i].title.substr(0, 5) === "pp500") {
             json500val = json500[i].body;
             break;
         }

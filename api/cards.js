@@ -10,6 +10,7 @@ const SSCards = async (data, pp500) => {
 
     let blockImage;
     const playerRank = data.playerInfo.rank;
+    let rankPercent = -1;
 
     if (data.playerInfo.banned === 1) blockImage = "banned";
     else if (playerRank === 0) blockImage = "zero";
@@ -20,6 +21,13 @@ const SSCards = async (data, pp500) => {
     else if (playerRank <= pp500 / 3 * 10) blockImage = "gold";
     else if (playerRank <= pp500 / 2) blockImage = "silver";
     else blockImage = "bronze";
+
+
+    if (data.playerInfo.banned === 1) rankPercent = "INVALID";
+    else if (playerRank === 0) rankPercent = "INVALID";
+    else {
+        rankPercent = (playerRank / pp500 * 100).toFixed(2);
+    }
 
     const blockBase64 = await img2DataURL(preURL + blockImage + sufURL);
 
@@ -87,9 +95,19 @@ const SSCards = async (data, pp500) => {
           ${data.playerInfo.playerName}
         </text>
       </g>
-      <g transform="translate(270 143)">
+      <g transform="translate(270 138)">
         <text fill="url(#${blockImage})" font-family="Arial" font-weight="bold" font-size="54">
           ${data.playerInfo.pp} pp
+        </text>
+      </g>
+      <g transform="translate(270 173)">
+        <text font-family="Arial" font-size="25">
+          Global #${playerRank} (TOP ${rankPercent}%)
+        </text>
+      </g>
+      <g transform="translate(270 208)">
+        <text font-family="Arial" font-size="25">
+          ${data.playerInfo.country} #${data.playerInfo.countryRank}
         </text>
       </g>
     </svg>

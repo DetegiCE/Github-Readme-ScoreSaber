@@ -39,8 +39,9 @@ const SSCards = async (data, pp500) => {
     console.log('LOADED');
 
     let playerName = data.playerInfo.playerName;
-    playerName = replaceAll(playerName, "<", "&lt;")
-    playerName = replaceAll(playerName, ">", "&gt;")
+    playerName = replaceAll(playerName, "&", "&amp;");
+    playerName = replaceAll(playerName, "<", "&lt;");
+    playerName = replaceAll(playerName, ">", "&gt;");
 
     return `
     <svg width="730" height="260" viewBox="0 0 730 260" 

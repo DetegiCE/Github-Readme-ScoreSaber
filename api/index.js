@@ -8,7 +8,7 @@ http.createServer(async (req, res) => {
     const { uid } = reqURL.query;
 
     if (!uid) {
-        res.write(JSON.stringify({error: 'Please input your ScoreSaber user ID'}));
+        res.write(JSON.stringify({error: 'Please input your ScoreSaber user ID. https://github-readme-score-saber.vercel.app/api?uid=YOUR_ID'}));
         res.end();
         return;
     }
@@ -18,7 +18,7 @@ http.createServer(async (req, res) => {
     const json = await ssInfo.json();
 
     if (!json.playerInfo || json.error) {
-        res.write(JSON.stringify({error: 'Your ScoreSaber ID is not correct'}));
+        res.write(JSON.stringify({error: 'Your ScoreSaber ID is not correct.'}));
         res.end();
         return;
     }

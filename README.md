@@ -1,6 +1,16 @@
 # Github-Readme-ScoreSaber
 May I show your ScoreSaber rank to GitHub readme?
 
+## Usage
+
+Put your ScoreSaber user ID behind `?uid=`
+
+`![](https://github-readme-score-saber.vercel.app/api?uid=)`
+
+## Preview
+
+[![](https://github-readme-score-saber.vercel.app/api?uid=76561198357821968)](https://scoresaber.com/u/76561198357821968)
+
 ## Tier
 
 You can find today's lower limit on [ISSUE](https://github.com/DetegiCE/Github-Readme-ScoreSaber/issues) tab

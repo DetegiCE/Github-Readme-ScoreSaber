@@ -20,11 +20,11 @@ const SSCards = async (data, pp500) => {
     if (data.playerInfo.banned === 1) blockImage = "banned";
     else if (playerRank === 0) blockImage = "zero";
     else if (playerRank <= 100) blockImage = "swordmaster";
-    else if (playerRank <= pp500 / 100) blockImage = "master";
-    else if (playerRank <= pp500 / 20) blockImage = "diamond";
-    else if (playerRank <= pp500 / 10) blockImage = "platinum";
-    else if (playerRank <= pp500 / 3 * 10) blockImage = "gold";
-    else if (playerRank <= pp500 / 2) blockImage = "silver";
+    else if (playerRank <= pp500 * 0.01) blockImage = "master";
+    else if (playerRank <= pp500 * 0.05) blockImage = "diamond";
+    else if (playerRank <= pp500 * 0.1) blockImage = "platinum";
+    else if (playerRank <= pp500 * 0.3) blockImage = "gold";
+    else if (playerRank <= pp500 * 0.5) blockImage = "silver";
     else blockImage = "bronze";
 
 

@@ -125,7 +125,7 @@ const SSCards = async (data, pp500) => {
         </text>
       </g>
       <g transform="translate(20 150)">
-        <text fill="url(#swordmaster)" font-family="Arial" font-size="30" font-weight="bold">
+        <text fill="url(#${blockImage})" font-family="Arial" font-size="30" font-weight="bold">
           ${capitalize(blockImage)}
         </text>
       </g>

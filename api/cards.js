@@ -105,7 +105,7 @@ const SSCards = async (data, pp500) => {
         <image width="100" height="100" xlink:href="${blockBase64}" />
       </g>
       <g transform="translate(20 30)">
-        <text font-family="Arial" font-size="12" font-weight="bold" fill="#3080ed">
+        <text font-family="Arial" font-size="18" font-weight="bold" fill="#3080ed">
           ${playerName}'s Scoresaber Stats
         </text>
       </g>
@@ -115,12 +115,12 @@ const SSCards = async (data, pp500) => {
         </text>
       </g>
       <g transform="translate(20 80)">
-        <text font-family="Arial" font-size="8" font-weight="bold">
+        <text font-family="Arial" font-size="15" font-weight="bold">
           Global #${playerRank} (TOP ${rankPercent}%)
         </text>
       </g>
       <g transform="translate(20 100)">
-        <text font-family="Arial" font-size="8" font-weight="bold">
+        <text font-family="Arial" font-size="15" font-weight="bold">
           ${data.playerInfo.country} #${data.playerInfo.countryRank}
         </text>
       </g>

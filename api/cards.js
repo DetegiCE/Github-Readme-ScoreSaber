@@ -48,7 +48,7 @@ const SSCards = async (data, pp500) => {
   playerName = replaceAll(playerName, ">", "&gt;");
 
   return `
-    <svg width="400" height="180" viewBox="0 0 400 180" xmlns="http://www.w3.org/2000/svg"
+    <svg width="450" height="180" viewBox="0 0 450 180" xmlns="http://www.w3.org/2000/svg"
     xmlns:xlink="http://www.w3.org/1999/xlink">
       <defs>
         <linearGradient id="bronze" x1="0%" x2="100%" y1="0%" y2="0%" gradientUnits="objectBoundingBox"
@@ -100,7 +100,7 @@ const SSCards = async (data, pp500) => {
           <stop stop-color="#6F0000" offset="100%" />
         </linearGradient>
       </defs>
-      <rect fill="white" x="0.5" y="0.5" width="400" height="180" rx="5" />
+      <rect fill="white" x="0.5" y="0.5" width="450" height="180" rx="5" />
       <g transform="translate(250 30)" stroke-linecap="square">
         <image width="100" height="100" xlink:href="${blockBase64}" />
       </g>
@@ -109,7 +109,7 @@ const SSCards = async (data, pp500) => {
           ${playerName}'s Scoresaber Stats
         </text>
       </g>
-      <g transform="translate(300 150)">
+      <g transform="translate(350 150)">
         <text fill="url(#${blockImage})" font-family="Arial" font-weight="bold" font-size="20" text-anchor="middle">
           ${data.playerInfo.pp}pp
         </text>

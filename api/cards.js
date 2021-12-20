@@ -101,7 +101,7 @@ const SSCards = async (data, pp500) => {
         </linearGradient>
       </defs>
       <rect fill="white" x="0.5" y="0.5" width="450" height="180" rx="5" />
-      <g transform="translate(250 30)" stroke-linecap="square">
+      <g transform="translate(300 30)" stroke-linecap="square">
         <image width="100" height="100" xlink:href="${blockBase64}" />
       </g>
       <g transform="translate(20 30)">

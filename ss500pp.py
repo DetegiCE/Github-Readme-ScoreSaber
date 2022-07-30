@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 
 url = 'https://new.scoresaber.com/api/players/'
 left = 500
-right = 1000
+right = 1500
 pp500rank = -1
 
 while True:

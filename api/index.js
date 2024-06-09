@@ -13,7 +13,7 @@ http.createServer(async (req, res) => {
         return;
     }
 
-    const ssURL = `https://new.scoresaber.com/api/player/${uid}/full`;
+    const ssURL = `https://scoresaber.com/api/player/${uid}/full`;
     const ssInfo = await fetch(ssURL);
     const json = await ssInfo.json();
 

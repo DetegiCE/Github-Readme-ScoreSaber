@@ -4,7 +4,7 @@ import os
 from github import Github
 from datetime import datetime, timedelta
 
-url = 'https://new.scoresaber.com/api/players/'
+url = 'https://scoresaber.com/api/players/'
 left = 500
 right = 1500
 pp500rank = -1
